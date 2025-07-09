@@ -43,14 +43,14 @@ int main() {
     aluno primeiroAno[30];
     aluno segundoAno[30];
     aluno terceiroAno[30];
-    int op, i;
+    int op;
     string nomeAluno;
 
     while (true) {
         cout << "\nSeja bem-vindo ao Sistema de Cadastro de Alunos!" << endl;
         cout << "Qual opção você deseja?" << endl;
-        cout << "1 - Matrícula na escola" << endl;
-        cout << "2 - Ver a nota do aluno" << endl;
+        cout << "1 - Ver a nota do aluno" << endl;
+        cout << "2 - Matrícula na escola" << endl; // <--- FEITO!!!
         cout << "3 - Situação do aluno" << endl;
         cout << "Digite a opção: ";
 
@@ -58,37 +58,91 @@ int main() {
             op = validacaoDeErroInteiro();
 
             switch (op) {
-                case 1:
-                    cout << "Qual a turma em que o aluno estuda? (1 - Primeiro ano, 2 - Segundo ano, 3 - Terceiro ano): ";
+                case 2:
+                    cout << "Qual a turma vai ser matricula (1 - Primeiro ano, 2 - Segundo ano, 3 - Terceiro ano): ";
                     op = validacaoDeErroInteiro();
 
                     if (op == 1)
                     {
-                        cout << "qual o nome do aluno?" << endl;
-                        cin >> nomeAluno;
-                        int cont = 0;
-                        
-                        for (i == 0; i <= 30; i++){
-                            if(primeiroAno[i].nome == nomeAluno){
-                                cont++;
 
-                            }
-
-                        }
-
-                        if(cont > 2){
-                            cout << "existem mais nome como este, digite o nome completo do aluno." << endl;
-                                    
-                        }
-                        else
+                        while (true)
                         {
+                            cout << "qual o nome?" << endl;
+                            cin >> nomeAluno;
+                            int cont = 0, i = 1;
+                        
+                            for (i == 1; i <= 31; i++){
+                                if(primeiroAno[i].nome.empty()){
+                                    primeiroAno[i].nome = nomeAluno;
+                                    cout << "aluno " << nomeAluno << "está matriculado em nossa escola id:" << i << endl;
+                                    i = 32;
+                                }
+                                
+                            }
+                            if (!primeiroAno[31].nome.empty())
+                            {
+                               cout << "a sala está cheia" << endl;
+                               break;
+                            }
                             
                         }
                         
                     }
-                    
+                    if (op == 2)
+                    {
 
+                        while (true)
+                        {
+                            cout << "qual o nome?" << endl;
+                            cin >> nomeAluno;
+                            int cont = 0, i = 1;
+                        
+                            for (i == 1; i <= 31; i++){
+                                if(primeiroAno[i].nome.empty()){
+                                    primeiroAno[i].nome = nomeAluno;
+                                    cout << "aluno " << nomeAluno << "está matriculado em nossa escola id:" << i << endl;
+                                    i = 32;
+                                }
+                                
+                            }
+                            if (!primeiroAno[31].nome.empty())
+                            {
+                               cout << "a sala está cheia" << endl;
+                               break;
+                            }
+                            
+                        }
+                        
+                    }
+                    if (op == 3)
+                    {
+
+                        while (true)
+                        {
+                            cout << "qual o nome?" << endl;
+                            cin >> nomeAluno;
+                            int cont = 0, i = 1;
+                        
+                            for (i == 1; i <= 31; i++){
+                                if(primeiroAno[i].nome.empty()){
+                                    primeiroAno[i].nome = nomeAluno;
+                                    primeiroAno[i].matricula = i;
+                                    cout << "aluno " << nomeAluno << " está matriculado em nossa escola id:" << primeiroAno[i].matricula << endl;
+                                    i = 32;
+                                }
+                                
+                            }
+                            if (!primeiroAno[31].nome.empty())
+                            {
+                               cout << "a sala está cheia" << endl;
+                               break;
+                            }
+                            
+                        }
+                        
+                    }
                     break;
+                
 
                 default:
                     cout << "Opção inválida. Tente novamente." << endl;
