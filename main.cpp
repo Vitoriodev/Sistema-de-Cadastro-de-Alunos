@@ -87,7 +87,7 @@ int main() {
                                 }
                                 
                             }
-                            if (!primeiroAno[30].nome.empty())
+                            if (!primeiroAno[29].nome.empty())
                             {
                                cout << "a sala está cheia" << endl;
                                break;
@@ -106,7 +106,7 @@ int main() {
                             {
                                 break;
                             }
-                            
+
                             int cont = 0, i;
                         
                             for (i = 0; i <= 30; i++){
@@ -118,7 +118,7 @@ int main() {
                                 }
                                 
                             }
-                            if (!segundoAno[30].nome.empty())
+                            if (!segundoAno[29].nome.empty())
                             {
                                cout << "a sala está cheia" << endl;
                                break;
@@ -148,7 +148,7 @@ int main() {
                                 }
                                 
                             }
-                            if (!terceiroAno[30].nome.empty())
+                            if (!terceiroAno[29].nome.empty())
                             {
                                cout << "a sala está cheia" << endl;
                                break;
