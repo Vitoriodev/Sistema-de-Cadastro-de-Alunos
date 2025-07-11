@@ -46,6 +46,7 @@ int main() {
     int op, i;
     float nota;
     string nomeAluno;
+    char sair;
 
     while (true) {
         cout << "\nSeja bem-vindo ao Sistema de Cadastro de Alunos!" << endl;
@@ -73,6 +74,7 @@ int main() {
                             cin >> nomeAluno;
                             if (nomeAluno == "n" || nomeAluno ==  "N") // fazer uns ajustes ainda.
                             {
+                                system("clear");
                                 break;
                             }
                             
@@ -104,6 +106,7 @@ int main() {
                             cin >> nomeAluno;
                             if (nomeAluno == "n" || nomeAluno ==  "N") // fazer uns ajustes ainda.
                             {
+                                system("clear");
                                 break;
                             }
 
@@ -134,6 +137,7 @@ int main() {
                             cin >> nomeAluno;
                             if (nomeAluno == "n" || nomeAluno ==  "N") // fazer uns ajustes ainda.
                             {
+                                system("clear");
                                 break;
                             }
 
@@ -183,7 +187,7 @@ int main() {
                             primeiroAno[i].notas = nota;
                             cout << "aluno: " << primeiroAno[i].nome << " nota: " << primeiroAno[i].notas << endl;
                         }
-                        else if(i > 31 || i < 1){
+                        else if(i > 30 || i < 1){
                             cout << "não possuimos essa quantidade de vargas" << endl;
                         }
                         else
@@ -191,7 +195,14 @@ int main() {
                             cout << "esse aluno não esta matriculado!" << endl;
 
                         }
-                        break;
+                        cout << "quer sair da opção de notas s/n" << endl;
+                        cin >> sair;
+                        if (sair == 's' || sair ==  'S')
+                        {
+                            system("clear");
+                            break;
+                        }
+
                     case 2:
                         cout << "qual o id do aluno" << endl;
                         i = validacaoDeErroInteiro();
@@ -205,7 +216,7 @@ int main() {
                             segundoAno[i].notas = nota;
                             cout << "aluno: " << segundoAno[i].nome << " nota: " << segundoAno[i].notas << endl;
                         }
-                        else if(i > 31 || i < 1){
+                        else if(i > 30 || i < 1){
                             cout << "não possuimos essa quantidade de vargas" << endl;
                         }
                         else
@@ -213,7 +224,13 @@ int main() {
                             cout << "esse aluno não esta matriculado!" << endl;
 
                         }
-                        break;
+                        cout << "quer sair da opção de notas s/n" << endl;
+                        cin >> sair;
+                        if (sair == 's' || sair ==  'S')
+                        {
+                            system("clear");
+                            break;
+                        }
 
                     case 3:
                         cout << "qual o id do aluno" << endl;
@@ -228,7 +245,7 @@ int main() {
                             terceiroAno[i].notas = nota;
                             cout << "aluno: " << terceiroAno[i].nome << " nota: " << terceiroAno[i].notas << endl;
                         }
-                        else if(i > 31 || i < 1){
+                        else if(i > 30 || i < 1){
                             cout << "não possuimos essa quantidade de vargas" << endl;
                         }
                         else
@@ -236,13 +253,18 @@ int main() {
                             cout << "esse aluno não esta matriculado!" << endl;
 
                         }
-                        break;
+                        cout << "quer sair da opção de notas s/n" << endl;
+                        cin >> sair;
+                        if (sair == 's' || sair ==  'S')
+                        {
+                            system("clear");
+                            break;
+                        }
                     
                     default:
                         cout << "essa opção não existe" << endl;
                         break;
                     }
-
                     break;
 
                 case 3:
@@ -261,7 +283,15 @@ int main() {
                     continue;
             }
 
-            //break;
+            cout << "quer fechar o programa s/n" << endl;
+            cin >> sair;
+
+            if (sair == 's' || sair == 'S')
+            {
+                system("clear");
+                break;
+            }
+            
 
         } catch (const char* erro) {
             cout << erro << endl;
